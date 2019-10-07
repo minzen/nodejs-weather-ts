@@ -18,7 +18,7 @@ const weather = {
         request(weatherUrl, function(error, response, body) {
         if (!error && response.statusCode === 200) {
             response = JSON.parse(body)
-            console.log('Current weather in ' + location + ': ' + response)
+            console.log('Current weather in ' + location + ': ' + JSON.stringify(response))
             res.json(response)
         } else {
             console.log(response.statusCode + response.body)
